@@ -11,9 +11,42 @@ body {
 	overflow-x: hidden;
 	margin-bottom: 5550px;
 
-	&.pb {background: @pbBackground;}
-	&.bns {background: @bnsBackground;}
-	&.l2 {background: @l2Background;}
+	&.pb {
+		background: @pbBackground;
+
+		.form {
+			background: @pb;
+		}
+	}
+
+	&.bns {
+		background: @bnsBackground;
+
+		.form {
+			background: @bns;
+		}
+	}
+
+	&.l2 {
+		background: @l2Background;
+
+		.form {
+			background: @l2;
+		}
+	}
+
+}
+
+a {
+	color: @blue;
+	transition-property: color;
+	.transitionOut;
+	text-decoration: none;
+
+	&:hover {
+		color: @red;
+		.transitionIn;
+	}
 }
 
 .big-title {

@@ -1,0 +1,66 @@
+@import "vars";
+
+.plugin {
+	padding: 0 0 100px 0;
+
+	.title {
+		text-align: center;
+	}
+}
+
+.form {
+	width: 660px;
+	margin: 50px auto 0;
+	border-radius: 30px;
+
+	&__menu {
+		display: flex;
+		justify-content: space-around;
+		border-bottom: 2px solid rgba(255,255,255, .07);
+		margin-bottom: 40px;
+
+		&-item {
+			color: rgba(255,255,255, .5);
+			transition-property: color;
+			.transitionOut;
+			cursor: pointer;
+			width: 50%;
+			font-weight: bold;
+			font-size: 22px;
+			padding: 20px 0;
+
+			&:hover {
+				color: white;
+				.transitionIn;
+			}
+
+			&--active {
+				color: @yellow;
+
+				&:hover {
+					color: @yellow;
+				}
+			}
+		}
+	}
+
+	&__help {
+		margin-top: 40px;
+		padding: 20px 0;
+		border-top: 2px solid rgba(255, 255, 255, .07);
+		font-weight: bold;
+	}
+}
+
+.fields {
+	height: 0;
+	width: 0;
+	opacity: 0;
+	margin: 0 auto;
+
+	&--active {
+		opacity: 1;
+		height: initial;
+		width: initial;
+	}
+}
