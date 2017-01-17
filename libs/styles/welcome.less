@@ -1,0 +1,161 @@
+@import "vars";
+
+.welcome {
+	display: flex;
+	padding-bottom: 100px;
+}
+
+.left {
+	width: 550px;
+}
+
+.title {
+	margin-top: 100px;
+
+	&__small {
+		font-size: 16px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		font-weight: bold;
+		opacity: .5;
+		margin-bottom: 20px;
+	}
+
+	&__get {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+
+		&-button {
+			padding: 0 25px;
+		}
+
+		&-sms, &-phone {
+			font-size: 20px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-weight: bold;
+			color: rgba(255, 255, 255, .5);
+		}
+
+		&-sms {
+			margin-left: 30px;
+			margin-top: 4px;
+			cursor: pointer;
+			border-bottom: 2px dashed rgba(255, 255, 255, .1);
+			transition-property: color;
+			.transitionOut;
+
+			.tooltip {
+				position: absolute;
+				opacity: 0;
+				width: 0;
+				background: black;
+				padding: 0;
+				border-radius: 10px;
+				transform: translate(0, 15px);
+				transition-property: transform;
+				.transitionOut;
+
+				img {
+					width: 0;
+					height: 0;
+				}
+			}
+
+			&:hover {
+				color: rgba(255, 255, 255, 1);
+				transition-property: color;
+				.transitionIn;
+
+				.tooltip {
+					opacity: 1;
+					padding: 20px;
+					width: initial;
+					transform: translate(0, 10px);
+					.transitionIn;
+
+					img {
+						width: initial;
+						height: initial;
+					}
+				}
+			}
+		}
+
+		&-divider {
+			margin: 0 15px;
+			width: 2px;
+			height: 25px;
+			background: @white07;
+			transform: rotate(15deg);
+		}
+	}
+}
+
+.prizes {
+	margin-top: 100px;
+
+	&__list {
+		width: 0;
+		height: 0;
+		opacity: 0;
+
+		&--active {
+			width: initial;
+			height: initial;
+			opacity: 1;
+		}
+	}
+}
+
+.right {
+	width: 610px;
+	position: relative;
+
+	&--pb {height: 1100px;}
+	&--bns {height: 700px;}
+	&--l2 {height: 1700px;}
+
+	.illustration {
+		position: absolute;
+		z-index: -1;
+
+		&__game {
+			position: absolute;
+			opacity: 0;
+			transition-property: opacity;
+			.transitionOut;
+
+			&--active {
+				opacity: 1;
+				.transitionIn;
+			}
+
+			&--pb {
+				left: -150px;
+				top: -230px;
+			}
+
+			&--bns {
+				left: -120px;
+				top: -100px;
+				transform: scale(.9);
+			}
+
+			&--l2 {
+				left: -170px;
+				top: -120px;
+			}
+		}
+
+		&__box {
+			position: absolute;
+		}
+
+		&__shadow {
+			position: absolute;
+		}
+
+	}
+}

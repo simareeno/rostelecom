@@ -1,27 +1,25 @@
 @import "vars";
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:700&subset=cyrillic');
 
 body {
 	font-family: 'PT Sans', sans-serif;
 	color: white;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
+	transition: background .2s ease-in-out;
+	overflow-x: hidden;
+	margin-bottom: 5550px;
 
-	&.pb {
-		background: @pbBackground;
-	}
-
-	&.bns {
-		background: @bnsBackground;
-	}
-
-	&.l2 {
-		background: @l2Background;
-	}
+	&.pb {background: @pbBackground;}
+	&.bns {background: @bnsBackground;}
+	&.l2 {background: @l2Background;}
 }
 
-h1 {
-
+.big-title {
+	font-size: 38px;
+	line-height: 48px;
+	font-weight: bold;
 }
 
 .wrapper {

@@ -6,8 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Интернет-тариф «Игровой» от Ростелекома и Фогейма</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+	<script src="scripts/jquery.sticky-kit.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" href="css/controls.css">
 	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/welcome.css">
+	<link rel="stylesheet" href="css/internet.css">
+	<link rel="stylesheet" href="css/easy.css">
+	<script src="scripts/controls.js" charset="utf-8"></script>
 	<script src="scripts/menu.js" charset="utf-8"></script>
 </head>
 <body class="pb">
@@ -42,15 +48,99 @@
 		<div class="left">
 			<div class="title">
 				<div class="title__small">Игровой тариф &laquo;Игровой&raquo;</div>
-				<div class="title__big">Смени тариф и получай бонусы в Point Blank или другой игре</div>
+				<div class="title__big big-title">Смени тариф и получай бонусы в Point Blank или другой игре</div>
 				<div class="title__get">
-					<div class="title__get-button">Подключить тариф</div>
-					<div class="title__get-sms">SMS</div>
+					<div class="title__get-button button button--yellow button--x">Подключить тариф</div>
+					<div class="title__get-sms">
+						<span>SMS</span>
+						<div class="tooltip">
+							<img src="img/sms.png" alt="">
+						</div>
+					</div>
+					<div class="title__get-divider"></div>
 					<div class="title__get-phone">8 800 100 08 00</div>
+				</div>
+				<div class="prizes">
+					<div class="prizes__list prizes__list--pb prizes__list--active">
+						<img src="img/pb-prizes.png" alt="">
+					</div>
+					<div class="prizes__list prizes__list--bns">
+						<img src="img/bns-prizes.png" alt="">
+					</div>
+					<div class="prizes__list prizes__list--l2">
+						<img src="img/l2-prizes.png" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="right"></div>
+		<div class="right right--pb">
+			<div class="illustration">
+				<div class="illustration__game illustration__game--active illustration__game--pb">
+					<div class="illustration__box"><img src="img/pb-box.png" alt=""></div>
+				</div>
+				<div class="illustration__game illustration__game--l2">
+					<div class="illustration__box"><img src="img/l2-box.png" alt=""></div>
+				</div>
+				<div class="illustration__game illustration__game--bns">
+					<div class="illustration__box"><img src="img/bns-box.png" alt=""></div>
+				</div>
+			</div>
+		</div>
 	</div>
+	<div class="divider"></div>
+	<div class="internet wrapper">
+		<div class="left">
+			<div class="title">
+				<div class="title__big big-title">Интернет</div>
+				<div class="title__select select select--black select--x">
+					<div class="select__input">
+						<div class="select__input-text">Москва</div>
+						<div class="select__input-arrows">
+							<div class="select__input-arrows-up">
+								<svg x="0px" y="0px" viewBox="0 0 6 5">
+									<path d="M0,0h6L3,5L0,0z"></path>
+								</svg>
+							</div>
+							<div class="select__input-arrows-down">
+								<svg x="0px" y="0px" viewBox="0 0 6 5">
+									<path d="M0,0h6L3,5L0,0z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="select__list">
+						<div class="select__list-item select__list-item-first">Санкт-Петербург</div>
+						<div class="select__list-item">Самара</div>
+						<div class="select__list-item">Псков</div>
+						<div class="select__list-item">Киров</div>
+						<div class="select__list-item">Калининград</div>
+						<div class="select__list-item select__list-item--active">Москва</div>
+						<div class="select__list-item select__list-item-last">Сочи</div>
+					</div>
+				</div>
+				<div class="title__button button button--yellow button--x">Подключить тариф</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="speedCost">
+				<div class="speedCost__speed speed">
+					<div class="speed__title">100</div>
+					<div class="speed__metrics">мбит</br>в секунду</div>
+				</div>
+				<div class="speedCost__divider"></div>
+				<div class="speedCost__cost cost">
+					<div class="cost__title">850</div>
+					<div class="cost__metrics">рублей</br>в месяц</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="easy wrapper">
+		<div class="title">
+			<div class="title__big big-title">Подключиться легко</div>
+		</div>
+	</div>
+	<div class="divider"></div>
 </body>
 </html>

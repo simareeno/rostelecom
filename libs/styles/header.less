@@ -54,6 +54,7 @@
 
 .menu {
 	position: relative;
+	user-select: none;
 
 	&__item {
 		display: flex;
@@ -106,6 +107,7 @@
 		position: absolute;
 		position: absolute;
 		bottom: -22px;
+		transition: transform .2s ease-in-out, width .2s ease-in-out;
 
 		&--pb {
 			width: 128px;
@@ -119,7 +121,7 @@
 
 		&--l2 {
 			width: 115px;
-			transform: translate(300px, 0);
+			transform: translate(330px, 0);
 		}
 	}
 }

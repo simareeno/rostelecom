@@ -1,0 +1,74 @@
+@import "vars";
+
+.internet {
+	padding: 0 0 100px 0;
+	display: flex;
+}
+
+.title {
+
+	&__select {
+		z-index: 1;
+		margin: 20px 0;
+		max-width: 217px;
+
+		.select__input {
+			width: 100%;
+			background: transparent;
+		}
+	}
+
+	&__button {
+		padding: 0 25px;
+	}
+}
+
+.speedCost {
+	padding-top: 125px;
+	display: flex;
+	font-family: 'PT Sans Caption', sans-serif;
+	font-weight: bold;
+
+	&__divider {
+		width: 100px;
+		height: 4px;
+		background: @whiteGradient;
+		transform: rotate(105deg) translate(75px, -17px);
+		opacity: .07;
+	}
+}
+
+.speed {
+	display: flex;
+	align-items: center;
+	color: @yellow;
+
+	&__title {
+		font-size: 84px;
+		text-shadow:  0 0 5px fade(@yellow, 50%), 0 0 30px fade(@yellow, 10%);
+	}
+
+	&__metrics {
+		font-size: 20px;
+		line-height: 21px;
+		margin-left: 15px;
+	}
+
+}
+
+.cost {
+	display: flex;
+	align-items: center;
+	transform: translate(0, 50px);
+
+	&__title {
+		font-size: 84px;
+		text-shadow:  0 0 5px fade(white, 50%), 0 0 30px fade(white, 10%);
+	}
+
+	&__metrics {
+		font-size: 20px;
+		line-height: 21px;
+		margin-left: 15px;
+	}
+}
