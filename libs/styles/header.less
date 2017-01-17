@@ -1,0 +1,125 @@
+@import "vars";
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+
+	&__logos {
+		display: flex;
+	}
+
+	&__menu {
+		display: flex;
+	}
+}
+
+.logos {
+
+	&__4game svg {
+		fill: rgba(255,255,255, .5);
+		transition-property: fill;
+		.transitionOut;
+
+		&:hover {
+			fill: @yellow;
+			cursor: pointer;
+			transition-property: fill;
+			.transitionIn;
+		}
+	}
+
+	&__rostelecom svg {
+		fill: rgba(255,255,255, .5);
+		transition-property: fill;
+		.transitionOut;
+
+		&:hover {
+			fill: #00aae7;
+			cursor: pointer;
+			transition-property: fill;
+			.transitionIn;
+		}
+	}
+
+	&__divider {
+		width: 2px;
+		margin: 0 30px;
+		background: @white07;
+		transform: rotate(15deg);
+	}
+}
+
+
+
+.menu {
+	position: relative;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+
+		& + & {
+			margin-left: 30px;
+		}
+
+		&-picture {
+			padding-right: 10px;
+
+			img {
+				border-radius: 100%;
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		&-name {
+			font-weight: bold;
+			font-size: 18px;
+			opacity: .5;
+			transition-property: opacity;
+			.transitionOut;
+		}
+
+		&:hover & {
+
+			&-name {
+				opacity: 1;
+				transition-property: opacity;
+				.transitionIn;
+			}
+		}
+
+		&--active & {
+
+			&-name {
+				opacity: 1;
+				color: @yellow;
+			}
+		}
+	}
+
+	&__line {
+		height: 2px;
+		background: @yellow;
+		position: absolute;
+		position: absolute;
+		bottom: -22px;
+
+		&--pb {
+			width: 128px;
+			transform: translate(174px, 0);
+		}
+
+		&--bns {
+			width: 142px;
+			transform: translate(0px, 0);
+		}
+
+		&--l2 {
+			width: 115px;
+			transform: translate(300px, 0);
+		}
+	}
+}
