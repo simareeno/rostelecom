@@ -9,13 +9,17 @@ body {
 	margin: 0;
 	transition: background .2s ease-in-out;
 	overflow-x: hidden;
-	margin-bottom: 5550px;
+	margin-bottom: 100px;
+
+	.form {
+		background: rgba(255,255,255,.1);
+	}
 
 	&.pb {
 		background: @pbBackground;
 
 		.form {
-			background: @pb;
+			// background: @pb;
 		}
 	}
 
@@ -23,7 +27,7 @@ body {
 		background: @bnsBackground;
 
 		.form {
-			background: @bns;
+			// background: @bns;
 		}
 	}
 
@@ -31,7 +35,7 @@ body {
 		background: @l2Background;
 
 		.form {
-			background: @l2;
+			// background: @l2;
 		}
 	}
 
@@ -50,7 +54,8 @@ a {
 }
 
 .big-title {
-	font-size: 38px;
+	font-family: 'PT Sans Caption', 'PT Sans', sans-serif;
+	font-size: 36px;
 	line-height: 48px;
 	font-weight: bold;
 }

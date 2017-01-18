@@ -49,17 +49,22 @@
 		<div class="left">
 			<div class="title">
 				<div class="title__small">Игровой тариф &laquo;Игровой&raquo;</div>
-				<div class="title__big big-title">Смени тариф и получай бонусы в Point Blank или другой игре</div>
+				<div class="title__big big-title">Смени тариф и получай бонусы в <span class="game-name">Point Blank</span> или другой игре</div>
 				<div class="title__get">
 					<div class="title__get-button button button--yellow button--x">Подключить тариф</div>
 					<div class="title__get-sms">
-						<span>SMS</span>
+						<span>По SMS</span>
 						<div class="tooltip">
 							<img src="img/sms.png" alt="">
 						</div>
 					</div>
-					<div class="title__get-divider"></div>
-					<div class="title__get-phone">8 800 100 08 00</div>
+					<!-- <div class="title__get-divider"></div> -->
+					<div class="title__get-phone">
+						<span>По телефону</span>
+						<div class="tooltip">
+							<img src="img/phone.png" alt="">
+						</div>
+					</div>
 				</div>
 				<div class="prizes">
 					<div class="prizes__list prizes__list--pb prizes__list--active">
@@ -148,11 +153,12 @@
 	<div class="divider"></div>
 	<div class="plugin wrapper">
 		<div class="title">
-			<div class="title___big big-title">Подключись сейчас</div>
+			<div class="title__big big-title">Подключись сейчас</div>
 			<div class="form">
 				<div class="form__menu">
 					<div class="form__menu-item form__menu-item--new form__menu-item--active" data-choice="new">Я новый абонент</div>
 					<div class="form__menu-item form__menu-item--old" data-choice="old">У меня Ростелеком</div>
+					<div class="form__menu-hl form__menu-hl--new"></div>
 				</div>
 				<div class="form__fields fields fields--new fields--active">
 					<div class="button button--x button--yellow">Подключить</div>
@@ -162,10 +168,21 @@
 					<div class="button button--x button--yellow">Подключить</div>
 					<img src="img/form-new.png" alt="">
 				</div>
-				<div class="form__help"><a href="">Условия предоставления услуги</a></div>
+				<!-- <div class="form__help"><a href="">Условия предоставления услуги</a></div> -->
+			</div>
+			<div class="phone-sms">
+				<img src="img/phone-sms.png" alt="">
 			</div>
 		</div>
 	</div>
 	<div class="divider"></div>
+	<div class="faq wrapper">
+		<div class="title">
+			<div class="title__big big-title">Важные вопросы</div>
+		</div>
+		<div class="faq__questions">
+			<img src="img/faq.png" alt="">
+		</div>
+	</div>
 </body>
 </html>

@@ -6,7 +6,7 @@
 }
 
 .left {
-	width: 550px;
+	width: 600px;
 }
 
 .title {
@@ -31,18 +31,17 @@
 		}
 
 		&-sms, &-phone {
-			font-size: 20px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
+			font-size: 18px;
 			font-weight: bold;
-			color: rgba(255, 255, 255, .5);
+			color: rgba(255, 255, 255, .75);
+			background: rgba(255, 255, 255, .1);
 		}
 
-		&-sms {
-			margin-left: 30px;
-			margin-top: 4px;
+		&-sms, &-phone {
+			margin-left: 20px;
 			cursor: pointer;
-			border-bottom: 2px dashed rgba(255, 255, 255, .1);
+			padding: 9px 15px 8px;
+			border-radius: 5px;
 			transition-property: color;
 			.transitionOut;
 
@@ -50,10 +49,10 @@
 				position: absolute;
 				opacity: 0;
 				width: 0;
-				background: black;
+				background: rgba(255,255,255,.1);
 				padding: 0;
-				border-radius: 10px;
-				transform: translate(0, 15px);
+				border-radius: 5px;
+				transform: translate(-15px, 25px);
 				transition-property: transform;
 				.transitionOut;
 
@@ -70,9 +69,9 @@
 
 				.tooltip {
 					opacity: 1;
-					padding: 20px;
+					padding: 15px 25px 15px 20px;
 					width: initial;
-					transform: translate(0, 10px);
+					transform: translate(-15px, 20px);
 					.transitionIn;
 
 					img {

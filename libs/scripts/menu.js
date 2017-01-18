@@ -12,7 +12,8 @@ function resetClasses() {
 
 function resetForm() {
 	$('.form__menu-item').removeClass('form__menu-item--active');
-	$('.fields').removeClass('fields--active')
+	$('.fields').removeClass('fields--active');
+	$('.form__menu-hl').removeClass('form__menu-hl--new form__menu-hl--old');
 }
 
 function goGame(newGame) {
@@ -24,6 +25,15 @@ function goGame(newGame) {
 		$('.illustration__game--' + newGame).addClass('illustration__game--active');
 		$('.welcome .right').addClass('right--' + newGame);
 		$('.prizes__list--' + newGame).addClass('prizes__list--active');
+
+		if (newGame == 'bns') {
+			$('.game-name').text('Blade & Soul');
+		} else if (newGame == 'pb') {
+			$('.game-name').text('Point Blank');
+		} else {
+			$('.game-name').text('Lineage 2');
+		}
+
 		currentGame = newGame;
 	}
 }
@@ -32,12 +42,19 @@ function goChoice(formChoice) {
 	if (formChoice !== currentChoice) {
 		resetForm();
 		$('.form__menu-item--' + formChoice).addClass('form__menu-item--active');
+		$('.form__menu-hl').addClass('form__menu-hl--' + formChoice);
 		$('.fields--' + formChoice).addClass('fields--active');
 		currentChoice = formChoice;
 	}
 }
 
 $(function() {
+
+$(".title__get-button, .title__button").click(function() {
+	$('html, body').animate({
+		scrollTop: $(".plugin").position().top
+	}, 200);
+});
 
 	$('.menu__item').click(function () {
 		var newGame = $(this).attr("data-game");

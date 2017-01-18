@@ -10,24 +10,54 @@
 
 .form {
 	width: 660px;
+	padding: 40px 0;
 	margin: 50px auto 0;
 	border-radius: 30px;
 
 	&__menu {
 		display: flex;
 		justify-content: space-around;
-		border-bottom: 2px solid rgba(255,255,255, .07);
-		margin-bottom: 40px;
+		// border-bottom: 2px solid rgba(255,255,255, .07);
+		margin: 0 auto 40px;
+		border-radius: 100px;
+		background: rgba(0,0,0,.3);
+		width: 475px;
+		position: relative;
+
+		&-hl {
+			position: absolute;
+			background: @yellow;
+			border-radius: 100px;
+			height: 100%;
+			z-index: 1;
+			left:0;
+			transition-property: transform, width;
+			.transitionOut;
+
+			&--new {
+				width: 235px;
+				.transitionIn;
+			}
+
+			&--old {
+				width: 250px;
+				transform: translate(225px,0);
+				.transitionIn;
+			}
+		}
 
 		&-item {
+			font-family: 'Pt Sans Caption', 'PT sans', sans-serif;
 			color: rgba(255,255,255, .5);
 			transition-property: color;
 			.transitionOut;
 			cursor: pointer;
 			width: 50%;
 			font-weight: bold;
-			font-size: 22px;
-			padding: 20px 0;
+			font-size: 18px;
+			padding: 12px 0;
+			position: relative;
+			z-index: 2;
 
 			&:hover {
 				color: white;
@@ -35,10 +65,10 @@
 			}
 
 			&--active {
-				color: @yellow;
+				color: black;
 
 				&:hover {
-					color: @yellow;
+					color: black;
 				}
 			}
 		}
@@ -57,10 +87,26 @@
 	width: 0;
 	opacity: 0;
 	margin: 0 auto;
+	position: relative;
+
+	.button {
+		position: absolute;
+		bottom: 0px;
+		right: 37px;
+		width: 260px;
+	}
 
 	&--active {
 		opacity: 1;
 		height: initial;
 		width: initial;
 	}
+}
+
+.phone-sms {
+	margin-top: 40px;
+}
+
+.faq .title {
+	margin-bottom: 50px;
 }
