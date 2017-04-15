@@ -1,0 +1,17 @@
+.transitionIn {
+  transition-duration: .05s;
+  transition-timing-function: ease-in;
+}
+.transitionOut {
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+.easy {
+  padding: 0 0 100px 0;
+}
+.easy .title {
+  text-align: center;
+}
+.how-to {
+  margin-top: 100px;
+}

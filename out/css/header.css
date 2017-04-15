@@ -1,0 +1,117 @@
+.transitionIn {
+  transition-duration: .05s;
+  transition-timing-function: ease-in;
+}
+.transitionOut {
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+.header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 20px 0;
+}
+.header__logos {
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__menu {
+  display: -ms-flexbox;
+  display: flex;
+}
+.logos__4game svg {
+  fill: rgba(255, 255, 255, 0.75);
+  transition-property: fill;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+.logos__4game svg:hover {
+  fill: #fac704;
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: .05s;
+  transition-timing-function: ease-in;
+}
+.logos__rostelecom svg {
+  fill: rgba(255, 255, 255, 0.75);
+  transition-property: fill;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+.logos__rostelecom svg:hover {
+  fill: #00aae7;
+  cursor: pointer;
+  transition-property: fill;
+  transition-duration: .05s;
+  transition-timing-function: ease-in;
+}
+.logos__divider {
+  width: 2px;
+  margin: 0 30px;
+  background: rgba(255, 255, 255, 0.12);
+  transform: rotate(15deg);
+}
+.menu {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.menu__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  cursor: pointer;
+}
+.menu__item + .menu__item {
+  margin-left: 30px;
+}
+.menu__item-picture {
+  padding-right: 10px;
+}
+.menu__item-picture img {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
+.menu__item-name {
+  font-weight: bold;
+  font-size: 18px;
+  opacity: .75;
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+.menu__item:hover .menu__item-name {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .05s;
+  transition-timing-function: ease-in;
+}
+.menu__item--active .menu__item-name {
+  opacity: 1;
+  color: #fac704;
+}
+.menu__line {
+  height: 2px;
+  background: #fac704;
+  position: absolute;
+  bottom: -22px;
+  transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+.menu__line--pb {
+  width: 128px;
+  transform: translate(174px, 0);
+}
+.menu__line--bns {
+  width: 142px;
+  transform: translate(0px, 0);
+}
+.menu__line--l2 {
+  width: 115px;
+  transform: translate(330px, 0);
+}

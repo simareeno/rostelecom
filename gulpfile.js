@@ -18,19 +18,19 @@ var SCRIPTS = './libs/scripts/**/*.js';
 gulp.task('img', function() {
 	return gulp.src(IMAGES)
 		.pipe(plumber())
-		.pipe(gulp.dest('./out/img'));
+		.pipe(gulp.dest('./docs/img'));
 });
 
 gulp.task('html', function() {
 	return gulp.src(HTML)
 		.pipe(plumber())
-		.pipe(gulp.dest('./out'));
+		.pipe(gulp.dest('./docs'));
 });
 
 gulp.task('scripts', function() {
 	return gulp.src(SCRIPTS)
 		.pipe(plumber())
-		.pipe(gulp.dest('./out/scripts'));
+		.pipe(gulp.dest('./docs/scripts'));
 });
 
 gulp.task('styles', function() {
@@ -40,7 +40,7 @@ gulp.task('styles', function() {
 			plugins: [autoprefix]
 		}))
 		// .pipe(minifyCSS())
-		.pipe(gulp.dest('./out/css'));
+		.pipe(gulp.dest('./docs/css'));
 });
 
 gulp.task('watch', function() {

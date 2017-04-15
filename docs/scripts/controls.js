@@ -1,0 +1,21 @@
+$(document).ready(function () {
+	$('.tabs__item').click(function () {
+		$(this).closest(".tabs").children().removeClass('tabs__item--active');
+		$(this).addClass('tabs__item--active');
+	});
+
+	$('.select__input').click(function () {
+		var list = $(this).closest('.select').find('.select__list')
+		list.toggleClass('select__list--active');
+		$(this).toggleClass('select__input--active');
+	});
+
+	$('.select__list-item').click(function () {
+		$(this).closest(".select__list").children().removeClass('select__list-item--active');
+		$(this).addClass('select__list-item--active');
+		var text = $(this).text();
+		$(this).closest('.select').find('.select__input-text').html(text);
+		$(this).closest(".select__list").removeClass('select__list--active');
+		$(this).closest('.select').find('.select__input').removeClass('select__input--active');
+	})
+});
