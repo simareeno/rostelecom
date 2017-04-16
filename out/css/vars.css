@@ -1,8 +1,0 @@
-.transitionIn {
-  transition-duration: .05s;
-  transition-timing-function: ease-in;
-}
-.transitionOut {
-  transition-duration: .2s;
-  transition-timing-function: ease-out;
-}
